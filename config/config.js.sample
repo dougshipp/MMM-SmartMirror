@@ -39,11 +39,16 @@ var config = {
 
 	modules: [
 		{
-			module: "alert",
-		},
-		{
-			module: "updatenotification",
-			position: "top_bar"
+			moudle:"MMM-cryptocurrency",
+			position: "top_right",
+			config: {
+				apikey: "647b6349-db17-48b0-8b5b-c5f339e0c2d4",
+				currency: ["ethereum", "bitcoin"],
+				conversion: "USD",
+				headers: ["change24h", "change1h", "change7d"],
+				displayType: "logoWithChanges",
+				showGraphs: true
+			}
 		},
 		{
 			module: "clock",
@@ -64,25 +69,6 @@ var config = {
 		{
 			module: "compliments",
 			position: "lower_third"
-		},
-		{
-			module: "currentweather",
-			position: "top_right",
-			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "weatherforecast",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
 		},
 		{
 			module: "newsfeed",
